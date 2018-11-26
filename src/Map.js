@@ -11,3 +11,7 @@ class Map {
 Map.loadFromFile = function(filename) {
   // TODO: fill
 }
+
+Map.loadMesh = function(filename) {
+  // TODO: fill
+}
