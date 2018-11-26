@@ -1,8 +1,8 @@
 {
-  "output": "script.min.js",
+  "output": "./dist/main.min.js",
   "scripts": [
     "three.min.js",
-    "script.js",
+    "main.js",
     "objects/objectlogic.js",
     "objects/player/player.js"
   ]
