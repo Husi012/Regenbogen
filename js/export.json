@@ -1,0 +1,9 @@
+{
+  "output": "script.min.js",
+  "scripts": [
+    "three.min.js",
+    "script.js",
+    "objects/objectlogic.js",
+    "objects/player/player.js"
+  ]
+}
