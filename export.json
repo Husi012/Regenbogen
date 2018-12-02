@@ -2,8 +2,11 @@
   "output": "./dist/main.min.js",
   "scripts": [
     "three.min.js",
-    "main.js",
-    "objects/objectlogic.js",
-    "objects/player/player.js"
+    "EventEmitter.js",
+    "Game.js",
+    "objects/player/player.js",
+    "objects/GameObject.js",
+    "Map.js",
+    "main.js"
   ]
 }

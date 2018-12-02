@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./production/",
+    "target": "esnext",
+    "watch": true
+  },
+  "compileOnSave": true,
+  "include": ["./src/"],
+  "exclude": ["./production/"]
+}
+  

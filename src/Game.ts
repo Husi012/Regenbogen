@@ -1,6 +1,12 @@
+import * as THREE from './three.min'
+import {GameMap} from './GameMap';
+import {EventEmitter, EventListener} from './EventEmitter';
 
-
-class Game() {
+export default class Game {
+  public map: GameMap;
+  private eventEmitter: EventEmitter;
+  public frame: EventListener;
+  private renderer: THREE.WebGLRenderer;
   constructor() {
     this._setupRenderer();
     this.map = null;
@@ -14,9 +20,7 @@ class Game() {
       this.adjustSize();
     });
   }
-  adjustSize(width, height) { // TODO: only available for one camera at once
-    width = width || window.innerWidth;
-    height = height || window.innerHeight;
+  adjustSize(width = window.innerWidth, height = window.innerHeight) { // TODO: only available for one camera at once
     this.renderer.setSize(width, height);
     let camera = this.getCamera();
     if (camera) {
@@ -31,7 +35,7 @@ class Game() {
     return null;
   }
   loadScene( name ) {
-    this.map = Map.loadFromFile( `maps/${name}.json` );
+    this.map = GameMap.loadFromFile( `maps/${name}.json` );
   }
   start() {
     this._animation();
