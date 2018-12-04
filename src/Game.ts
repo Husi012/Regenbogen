@@ -1,5 +1,5 @@
 import * as THREE from './three.min'
-import {GameMap} from './GameMap';
+import {GameMap} from './maps/GameMap';
 import {EventEmitter, EventListener} from './EventEmitter';
 
 export default class Game {
@@ -34,8 +34,8 @@ export default class Game {
     }
     return null;
   }
-  loadScene( name ) {
-    this.map = GameMap.loadFromFile( `maps/${name}.json` );
+  async loadScene( name ) {
+    this.map = await GameMap.loadFromFile( `maps/${name}.json` );
   }
   start() {
     this._animation();

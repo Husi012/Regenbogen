@@ -1,6 +1,6 @@
 import * as THREE from '../../three.min';
 import {GameObject, GameObjectHolder, GameObjectVisible} from '../GameObject';
-import {GameMap} from '../../GameMap';
+import {GameMap} from '../../maps/GameMap';
 
 
 GameObject.list.push(new GameObjectHolder('player', class extends GameObjectVisible {
