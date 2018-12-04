@@ -1,0 +1,19 @@
+{
+  "objects": [
+    {
+      "name": "spawn_t1",
+      "pos": [0, 0, 0]
+    },
+    {
+      "name": "spawn_t2",
+      "pos": [100, 100, 0]
+    },
+    {
+      "name": "floor",
+      "area": {
+        "start": [0, 0, 0],
+        "end":   [100, 100, -1]
+      }
+    }
+  ]
+}
