@@ -6,18 +6,18 @@ export class EventEmitter {
   }
 
   get(name) {
-    if (name in this.listeners) {
+    if ( name in this.listeners ) {
       return this.listeners[name];
     } else {
       return this.listeners[name] = new EventListener();
     }
   }
-  subscribe(name, callback) {
-    let event = this.get(name);
-    event.subscribe(callback);
+  subscribe( name, callback ) {
+    let event = this.get( name );
+    event.subscribe( callback );
   }
-  trigger(name) {
-    let event = this.get(name);
+  trigger( name ) {
+    let event = this.get( name );
     event.trigger();
   }
 
@@ -31,10 +31,10 @@ export class EventListener {
   }
 
   subscribe(callback) {
-    this.callbacks.push(callback);
+    this.callbacks.push( callback );
   }
   trigger() {
-    let args = Array.prototype.slice.call(arguments, 1);
-    this.callbacks.forEach((callback) => callback(...args));
+    let args = Array.prototype.slice.call( arguments, 1 );
+    this.callbacks.forEach( (callback) => callback(...args) );
   }
 }
